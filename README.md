@@ -35,4 +35,4 @@
 사용문법: [Title](link)
 적용예: [Google](https://google.com, "google link")
 ```
-Link: [Google](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+참고자료: [Link](https://gist.github.com/ihoneymon/652be052a0727ad59601)
