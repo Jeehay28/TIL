@@ -27,3 +27,12 @@
     - `:q` : 나오기
     - `:wq` : 저장하고 나오기
   - 참고자료 [링크](https://zeddios.tistory.com/122)
+
+
+#### 마크다운 문법
+- 외부 링크 추가
+```
+사용문법: [Title](link)
+적용예: [Google](https://google.com, "google link")
+```
+Link: [Google](https://gist.github.com/ihoneymon/652be052a0727ad59601)
