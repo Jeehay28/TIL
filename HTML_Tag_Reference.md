@@ -39,3 +39,51 @@
 `<a href="https://html.spec.whatwg.org" target="_blank"></a>`
 `<a id="top"></a>
 <a href="#top">Top</a>`
+
+
+### HTML Forms Tags
+- `<form>`	defines an HTML form for user input
+- `<fieldset>`	groups related elements in a form
+- `<input>`	defines an input control
+`<input type=＂text“ value=“abcd” size=“6” maxlength=“10” >`
+`<input type="search" id="searchBox">`
+`<input type="email" id="user-email">`
+`<input type="tel" id="user-phone">`
+`<input type="color" value="#ff0000">`
+`<input type="number" id="prod-num" min=“1" max="100" step="1">`
+`<input type="range" id="volume" min=“0" max="100" step="1">`
+`<input type="date" id="delivery">`
+`<input type="month">`
+`<input type="week">`
+`<input type ="time">`
+`<input type="datetime-local">`
+`<input type="radio">`
+`<input type="checkbox">`
+`<input type="radio" name="subject" id="speaking" value="speaking" checked>`
+`<input type="checkbox" name="mailing" id="news" value="news" checked>`
+`<input type="file">`
+`<input type="submit" value="submit">`
+`<input type="reset" value="reset">`
+`<input type="text" id="user-id" autofocus>`
+`<input type="text" id="user-id" autofocus placeholder="email">`
+`<input type="text" id="user-area" value="Korea" readonly>`
+`<input type="password" id="user-pwd" required>`
+
+- `<legend`>	defines a caption for a `<fieldset>` element
+- `<label>`	defines a label for an `<input>` element
+`<label for="user-id">ID</label>
+<input type="text" id="user-id">`
+- `<button>`	defines a clickable button
+`<button type="submit">submit</button>`
+`<button type="reset">reset</button>`
+- `<textarea>`	defines a multiline input control (text area)
+`<textarea id="memo" cols="40" rows="5" placeholder="Leave a comment."></textarea>`
+- `<select>`	defines a drop-down list
+- `<option>`	defines an option in a drop-down list
+- `<datalist>`	specifies a list of pre-defined options for input controls
+`<input type="text" id="bodysize" list="size-option" placeholder="Type or select from the menu">`
+`<datalist id="size-option">`
+`<option value="s">s</option>`
+
+
+
