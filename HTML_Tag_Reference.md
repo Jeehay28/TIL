@@ -86,4 +86,6 @@
 `<option value="s">s</option>`
 
 
-
+### HTML Style Tags
+- `<style>`	defines style information for an HTML document
+- `<link>`	defines a link between a document and an external resource 
