@@ -94,5 +94,3 @@
 ### HTML Styles CSS
 
 - CSS #4
-
-ㄹㄴㄹㄴㅇㄹ
