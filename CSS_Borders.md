@@ -1,7 +1,11 @@
 # CSS Border Style
+
 ### Property
+
 - `border-style` specifies what kind of border to display
+
 ### Value
+
 - `dotted` defines a dotted border
 - `dashed` defines a dashed border
 - `solid` defines a solid border
@@ -31,6 +35,7 @@ p.mix {border-style: dotted dashed solid double;}
 ![보더스타일](https://user-images.githubusercontent.com/106166065/191639627-4a95b01b-6b63-484b-a852-5f36682d45ae.JPG)
 
 - border style with different values: top →right → bottom → left
+
 ```
 border-style: solid dotted dashed double;
 border-style: solid dotted dashed;
@@ -38,12 +43,15 @@ border-style: solid dotted;
 border-style: solid;
 
 ```
+
 ![다른값적용](https://user-images.githubusercontent.com/106166065/191641381-a930be1e-c22d-477e-a51c-7f66130485f7.JPG)
 
-
 # Border Width
+
 ### Property
+
 - `border-width` specifies the width of the four borders
+
 ```
 p.one {
   border-style: solid;
@@ -65,18 +73,18 @@ p.four {
   border-width: thick;
 }
 ```
+
 ![borderwidth](https://user-images.githubusercontent.com/106166065/191642958-22d349e3-a338-4baa-afa5-1e896c854a6b.JPG)
 
-
-
-
-
-
 # Border Color
+
 ### Property
+
 - `border-color` used to set the color of the four borders
-- 
+-
+
 ### Set by
+
 - name: specifies a color name, like "red"
 - HEX: specifies a HEX value, like "#ff0000"
 - RGB: specifies a RGB value, like "rgb(255,0,0)"
@@ -100,9 +108,10 @@ p.three {
 }
 ```
 
-
 # Rounded Borders
-# Property
+
+### Property
+
 - `border-radius` used to add rounded borders to an element
 
 ```
@@ -117,10 +126,48 @@ p {
 - `border-bottom-left-radius`
 - `border-bottom-right-radius`
 
+# Border Images
 
+### Property
 
+- `border-image` specifies an image to be used instead of the normal border around an element
 
+```
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
 
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 stretch;
+}
+```
 
+### Border-image generator
 
+https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 
+# CSS Padding
+
+### Property
+
+- `padding` used to generate space around an element's content, inside of any defined borders
+- `padding-top`
+- `padding-right`
+- `padding-bottom`
+- `padding-left`
+
+```
+.padding1 {
+padding:20px 30px 40px 50px;
+}
+.padding2 {
+padding:20px 30px;
+}
+.padding3 {
+padding:20px;
+}
+```
