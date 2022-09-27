@@ -19,6 +19,7 @@
   - 132번째 명령어를 복구하고 싶으면 `!132` 입력
 
 #### vim 사용법
+
 - **Vim** is a free and open-source, screen-based **text editor program**.
 
 - 명령 모드와 입력 모드
@@ -124,4 +125,10 @@ or
 
 ```
 git switch 브랜치 이름
+```
+
+4. git checkout -b 브랜치 이름
+
+```
+git checkout -b 브랜치 이름
 ```
