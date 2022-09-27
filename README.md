@@ -142,3 +142,35 @@ git checkout -b 브랜치 이름
 ```
 git merge 브랜치명
 ```
+
+## 새로운 branch를 생성하여 github main 에 업데이트
+
+### from a local repository
+
+- make a new branch
+- switch to a new branch
+- commit using add, commit, push
+
+```
+git branch 8-branch
+
+git checkout 8-branch
+
+git add README.md
+
+git commit -m "commit from 8-branch"
+
+git push origin 8-branch
+```
+
+### @GitHub (Remote)
+
+- pull request
+- `main <- 8-branch`
+- confirm
+
+### Sync between Local & Remote
+
+```
+git pull origin main
+```
