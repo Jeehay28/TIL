@@ -103,40 +103,35 @@ git status
 
 ##### 관련 명령어
 
-1. 브랜치 목록 보기
+- 브랜치 목록 보기
 
 ```
 git branch
 ```
 
-2. 브랜치 생성하기
+- 브랜치 생성하기
 
 ```
 git branch 브랜치 이름
 ```
 
-3. 특정 브랜치로 전환하기
+- 특정 브랜치로 전환하기
 
 ```
 git checkout 브랜치 이름
 
 or
-```
 
-```
 git switch 브랜치 이름
 ```
 
-
-4. 브랜치 생성과 체크아웃 동시에 하기
+- 브랜치 생성과 체크아웃 동시에 하기
 
 ```
 git checkout -b 브랜치명
 
-4. git checkout -b 브랜치 이름
-
-```
 git checkout -b 브랜치 이름
+
 ```
 
 # 2022-09-27
@@ -169,7 +164,7 @@ git commit -m "commit from 8-branch"
 git push origin 8-branch
 ```
 
-### @GitHub (Remote)
+### @GitHub(Remote)
 
 - pull request
 - `main <- 8-branch`
