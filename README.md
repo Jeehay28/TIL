@@ -16,9 +16,11 @@
 - `ls` : list의 약자로 현재 작업 경로에 있는 파일이나 디렉토리를 출력해주는 명령어
   - `ls -a`, `ls -l`, `ls -al` 과 같은 옵션을 붙일 수 있음
 - `history` : 과거에 사용했던 명령어 리스트를 보여줌
-  - 132번째 명령어를 복구하고 싶음녀 `!132` 입력
+  - 132번째 명령어를 복구하고 싶으면 `!132` 입력
 
 #### vim 사용법
+
+- **Vim** is a free and open-source, screen-based **text editor program**.
 
 - 명령 모드와 입력 모드
   - vim 에디터를 열때는 명령 모드로 진입함
@@ -95,9 +97,9 @@ git status
 
 #### 브랜치
 
-- 정의: A branch in Git is simply a lightweight movable pointer to one of these commits.
+- 정의: **A branch in Git is simply a lightweight movable pointer to one of these commits.**
 - 브랜치는 특정한 목표를 가지고 코드를 수정할 때 주로 만듦
-  - 이슈 하나당 브랜치 하나를 주로 만듦
+  - 이슈 하나 당 브랜치 하나를 주로 만듦
 
 ##### 관련 명령어
 
@@ -125,8 +127,14 @@ or
 git switch 브랜치 이름
 ```
 
+
 4. 브랜치 생성과 체크아웃 동시에 하기
 
 ```
 git checkout -b 브랜치명
+
+4. git checkout -b 브랜치 이름
+
+```
+git checkout -b 브랜치 이름
 ```
