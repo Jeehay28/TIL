@@ -69,7 +69,7 @@ background: linear-gradient(to left bottom, #f3ff07, #ffa200);
 }
 ```
 - differently spaced color stops
-![differently](https://user-images.githubusercontent.com/106166065/192677182-1d529337-ace2-4e30-9f21-aae6de3b9577.PNG)
+
 
 
 
@@ -85,6 +85,21 @@ background: linear-gradient(to left bottom, #f3ff07, #ffa200);
   background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
 }
 ```
+![repeating](https://user-images.githubusercontent.com/106166065/192685504-7d8ae9af-1956-41a5-99ff-902af1a2ed1b.PNG)
+
+```
+.box {
+      width:300px;
+      height: 300px;
+      padding: 30px;
+      border: 10px solid #000;
+      border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+    }
+ ```
+ 
+ ### CSS Gradient Generator
+ - [Gradient Designer Minefield 2.0](https://gradient-designer.csspost.com/)
+ - [CSS Gradient](https://cssgradient.io/)
 
 
 # CSS Functions
@@ -94,6 +109,3 @@ background: linear-gradient(to left bottom, #f3ff07, #ffa200);
 - `conic-gradient()` creates a conic gradient
 - `linear-gradient()` creates a linear gradient
 - `radial-gradient()` creates a radial gradient
-
-
-
