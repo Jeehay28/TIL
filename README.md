@@ -144,7 +144,7 @@ git checkout -b 브랜치 이름
 git merge 브랜치명
 ```
 
-## 새로운 branch를 생성하여 github main 에 업데이트
+## 새로운 branch를 생성하여 원격저장소 main branch 에 업데이트
 
 ### from a local repository
 
