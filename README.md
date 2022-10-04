@@ -188,3 +188,17 @@ git commit -am "message"
 ```
 git push -f origin master
 ```
+
+## :date: 04/10/2022
+### What to Include in your README
+1. Project's Title
+2. Project Description
+3. Table of Contents (Optional)
+4. How to Install and Run the Project
+5. How to Use the Project
+6. Include Credits
+7. Add a License
+8. Badges (Additional README Sections)
+🔗[for further information](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+
+
