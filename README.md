@@ -202,3 +202,22 @@ git push -f origin master
 🔗[for further information](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 
 
+## :date: 04/10/2022
+### How to push a cloned repo to my repo
+
+```
+$ git clone HTTPS
+
+$ git remote -v
+
+$ git remote remove origin       <----- reset origin
+
+$ git remote add origin HTTPS    <----- adds new origin
+
+$ git branch -M main             <----- changes 'master' to 'main'
+
+$ git push -u origin main        <----- uploads content from a local repository to a remote repository
+
+```
+
+
