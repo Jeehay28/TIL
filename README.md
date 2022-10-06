@@ -44,6 +44,10 @@
       - `rm 789.txt.swp` <-- `rm` 명령어는 remove 약어
 
 #### :pencil2: 마크다운 문법
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7-branch-command-add
 - 외부 링크 추가
 
 ```
@@ -131,6 +135,121 @@ git checkout -b 브랜치명
 
 git checkout -b 브랜치 이름
 
+<<<<<<< HEAD
+=======
+```
+
+## :date: 27/09/2022
+
+### 브랜치 병합
+
+- 명령어: `git merge 브랜치명`
+
+## 새로운 branch를 생성하여 원격저장소 main branch 에 업데이트
+
+### from a local repository
+
+- make a new branch
+- switch to a new branch
+- commit using add, commit, push
+
+```
+git branch 8-branch
+git checkout 8-branch
+git add README.md
+git commit -m "commit from 8-branch"
+git push origin 8-branch
+```
+
+### @GitHub(Remote)
+
+- pull request
+- `main <- 8-branch`
+- confirm
+
+### Sync between Local & Remote
+
+```
+git pull origin main
+```
+
+## :date: 30/09/2022
+
+### How to delete all commit history
+
+1. **Delete the .git directory** in your project root (note that it's hidden)
+2. Initialize a new repository in the same folder and link it to the GitHub repository
+
+```
+rm -rf .git
+git init
+git remote add origin https://github.com/Jeehay28/Jeehay28.git
+```
+
+3. Commit your current version of code
+
+```
+git add *
+git commit -am "message"
+```
+
+4. Force the update to GitHub
+
+```
+git push -f origin master
+```
+
+## :date: 04/10/2022
+
+### What to Include in your README
+
+1. Project's Title
+2. Project Description
+3. Table of Contents (Optional)
+4. How to Install and Run the Project
+5. How to Use the Project
+6. Include Credits
+7. Add a License
+8. Badges (Additional README Sections)
+   🔗[for further information](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+
+## :date: 04/10/2022
+
+### How to push a cloned repo to my repo
+
+```
+$ git clone HTTPS
+
+$ git remote -v
+
+$ git remote remove origin       <----- reset origin
+
+$ git remote add origin HTTPS    <----- adds new origin
+
+$ git branch -M main             <----- changes 'master' to 'main'
+
+$ git push -u origin main        <----- uploads content from a local repository to a remote repository
+
+```
+
+## :date: 06/10/2022
+
+### How to delete a Git branch both locally and remotely
+
+```
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+```
+
+### How to delete a specific commit
+
+```
+git reset commit hash
+git reset --hard commit hash
+>>>>>>> 7-branch-command-add
 ```
 
 ## :date: 27/09/2022
