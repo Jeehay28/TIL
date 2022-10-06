@@ -142,3 +142,18 @@ align-self : flex-end
 align-content : flex-end
 }
 ```
+
+#### `gap` defines the size of the gap between the rows and columns
+
+- a shorthand for the following properties: `row-gap` `column-gap`
+
+```
+/* Set the gap between rows and columns to 50px: */
+.grid-container {
+  gap: 50px;
+}
+```
+
+#### Flexbox Froggy
+
+- 🔗 [a game for learning CSS flexbox](https://flexboxfroggy.com/)
