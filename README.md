@@ -227,7 +227,7 @@ $ git push -u origin main        <----- uploads content from a local repository 
 
 ```
 
-:date: 06/10/2022
+## :date: 06/10/2022
 
 ### How to delete a git branch both locally and remotely
 
@@ -237,4 +237,25 @@ git branch -d localBranchName
 
 // delete branch remotely
 git push origin --delete remoteBranchName
+```
+
+### How to delete a git branch both locally and remotely
+
+```
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+```
+
+### How to cancel a merge
+
+```
+# Reset all the changes back to the last commit.
+# Note: This cannot be reverted!
+$ git reset --hard HEAD
+
+# OR
+$ git merge --abort
 ```
