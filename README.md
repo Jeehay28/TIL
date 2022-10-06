@@ -2,11 +2,11 @@
 
 > 매일매일 배운 것을 기록합니다.
 
-## 2022-09-13
+## :date: 13/09/2022
 
 ### 웹 프로그래밍 기획과 기본
 
-#### 리눅스 커맨드라인 기초
+#### :pencil2: 리눅스 커맨드라인 기초
 
 - `pwd` : print working directory의 약자로 현재 작업 경로를 출력해주는 명령어
 - `cd` : change directory의 약자로 현재 작업 경로를 변경할 때 쓰는 명령어
@@ -18,7 +18,7 @@
 - `history` : 과거에 사용했던 명령어 리스트를 보여줌
   - 132번째 명령어를 복구하고 싶으면 `!132` 입력
 
-#### vim 사용법
+#### :pencil2: vim 사용법
 
 - **Vim** is a free and open-source, screen-based **text editor program**.
 
@@ -43,7 +43,7 @@
     - 정상 종료 후, `swp` 파일 삭제
       - `rm 789.txt.swp` <-- `rm` 명령어는 remove 약어
 
-#### 마크다운 문법
+#### :pencil2: 마크다운 문법
 
 - 외부 링크 추가
 
@@ -52,9 +52,9 @@
 적용예: [Google](https://google.com, "google link")
 ```
 
-참고자료 [Link](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+- [참고자료](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
-#### 버전 관리 시스템과 git
+#### :pencil2: 버전 관리 시스템과 git
 
 ##### 버전 관리 시스템을 사용하는 이유
 
@@ -73,7 +73,7 @@
 
 ##### 리포지토리
 
-- 정의 : 여러 파일을 하나로 모은 컬렉션
+- 정의: 여러 파일을 하나로 모은 컬렉션
 
 ###### 커밋 이력 보기
 
@@ -93,9 +93,9 @@ git log
 git status
 ```
 
-## 2022-09-20
+## :date: 20/09/2022
 
-#### 브랜치
+#### :pencil2: 브랜치
 
 - 정의: **A branch in Git is simply a lightweight movable pointer to one of these commits.**
 - 브랜치는 특정한 목표를 가지고 코드를 수정할 때 주로 만듦
@@ -103,35 +103,145 @@ git status
 
 ##### 관련 명령어
 
-1. 브랜치 목록 보기
+- 브랜치 목록 보기
 
 ```
 git branch
 ```
 
-2. 브랜치 생성하기
+- 브랜치 생성하기
 
 ```
 git branch 브랜치 이름
 ```
 
-3. 특정 브랜치로 전환하기
+- 특정 브랜치로 전환하기
 
 ```
 git checkout 브랜치 이름
 
 or
-```
 
-```
 git switch 브랜치 이름
 ```
 
-4. git checkout -b 브랜치 이름
+- 브랜치 생성과 체크아웃 동시에 하기
 
 ```
+git checkout -b 브랜치명
+
 git checkout -b 브랜치 이름
+
 ```
 
-commit from 7-branch-command-add
-another commit from 7-branch-command-add
+## :date: 27/09/2022
+
+### 브랜치 병합
+
+- 명령어: `git merge 브랜치명`
+
+## 새로운 branch를 생성하여 원격저장소 main branch 에 업데이트
+
+### from a local repository
+
+- make a new branch
+- switch to a new branch
+- commit using add, commit, push
+
+```
+git branch 8-branch
+git checkout 8-branch
+git add README.md
+git commit -m "commit from 8-branch"
+git push origin 8-branch
+```
+
+### @GitHub(Remote)
+
+- pull request
+- `main <- 8-branch`
+- confirm
+
+### Sync between Local & Remote
+
+```
+git pull origin main
+```
+
+## :date: 30/09/2022
+
+### How to delete all commit history
+
+1. **Delete the .git directory** in your project root (note that it's hidden)
+2. Initialize a new repository in the same folder and link it to the GitHub repository
+
+```
+rm -rf .git
+git init
+git remote add origin https://github.com/Jeehay28/Jeehay28.git
+```
+
+3. Commit your current version of code
+
+```
+git add *
+git commit -am "message"
+```
+
+4. Force the update to GitHub
+
+```
+git push -f origin master
+```
+
+## :date: 04/10/2022
+
+### What to Include in your README
+
+1. Project's Title
+2. Project Description
+3. Table of Contents (Optional)
+4. How to Install and Run the Project
+5. How to Use the Project
+6. Include Credits
+7. Add a License
+8. Badges (Additional README Sections)
+   🔗[for further information](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+
+## :date: 04/10/2022
+
+### How to push a cloned repo to my repo
+
+```
+$ git clone HTTPS
+
+$ git remote -v
+
+$ git remote remove origin       <----- reset origin
+
+$ git remote add origin HTTPS    <----- adds new origin
+
+$ git branch -M main             <----- changes 'master' to 'main'
+
+$ git push -u origin main        <----- uploads content from a local repository to a remote repository
+
+```
+
+## :date: 06/10/2022
+
+### How to delete a Git branch both locally and remotely
+
+```
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+```
+
+### How to delete a specific commit
+
+```
+git reset commit hash
+git reset --hard commit hash
+```
