@@ -157,3 +157,9 @@ align-content : flex-end
 #### Flexbox Froggy
 
 - 🔗 [a game for learning CSS flexbox](https://flexboxfroggy.com/)
+
+### `flex` property is a shorthand property for:
+
+- `flex-grow` a number specifying how much the item will grow relative to the rest of the flexible items
+- `flex-shrink` a number specifying how much the item will shrink relative to the rest of the flexible items
+- `flex-basis` specifies the initial length of a flexible item
