@@ -239,16 +239,6 @@ git branch -d localBranchName
 git push origin --delete remoteBranchName
 ```
 
-### How to delete a git branch both locally and remotely
-
-```
-// delete branch locally
-git branch -d localBranchName
-
-// delete branch remotely
-git push origin --delete remoteBranchName
-```
-
 ### How to cancel a merge
 
 ```
