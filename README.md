@@ -249,3 +249,10 @@ $ git reset --hard HEAD
 # OR
 $ git merge --abort
 ```
+
+### How to delete a commit
+
+```
+git reset --hard HEAD~1
+git push origin HEAD --force
+```
