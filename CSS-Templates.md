@@ -2,9 +2,9 @@
 
 #### Header, equal columns and footer:
 
-- using float
-- using flexbox
-- using grid
+- 🔗 [using float](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/CSS-Layout-Template-1.html)
+- 🔗 [using flexbox](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/CSS-Layout-Template-2.html)
+- 🔗 [using grid](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/CSS-Layout-Template-3.html)
 
 #### Header, unequal columns and footer:
 
