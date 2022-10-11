@@ -44,6 +44,7 @@
       - `rm 789.txt.swp` <-- `rm` 명령어는 remove 약어
 
 #### :pencil2: 마크다운 문법
+
 - 외부 링크 추가
 
 ```
@@ -136,12 +137,13 @@ git checkout -b 브랜치 이름
 ## :date: 27/09/2022
 
 ### 브랜치 병합
-- 명령어: `git merge 브랜치명`
 
+- 명령어: `git merge 브랜치명`
 
 ## 새로운 branch를 생성하여 원격저장소 main branch 에 업데이트
 
 ### from a local repository
+
 - make a new branch
 - switch to a new branch
 - commit using add, commit, push
@@ -155,18 +157,21 @@ git push origin 8-branch
 ```
 
 ### @GitHub(Remote)
+
 - pull request
 - `main <- 8-branch`
 - confirm
 
 ### Sync between Local & Remote
+
 ```
 git pull origin main
 ```
 
-
 ## :date: 30/09/2022
+
 ### How to delete all commit history
+
 1. **Delete the .git directory** in your project root (note that it's hidden)
 2. Initialize a new repository in the same folder and link it to the GitHub repository
 
@@ -190,7 +195,9 @@ git push -f origin master
 ```
 
 ## :date: 04/10/2022
+
 ### What to Include in your README
+
 1. Project's Title
 2. Project Description
 3. Table of Contents (Optional)
@@ -199,10 +206,10 @@ git push -f origin master
 6. Include Credits
 7. Add a License
 8. Badges (Additional README Sections)
-🔗[for further information](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
-
+   🔗[for further information](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 
 ## :date: 04/10/2022
+
 ### How to push a cloned repo to my repo
 
 ```
@@ -220,4 +227,14 @@ $ git push -u origin main        <----- uploads content from a local repository 
 
 ```
 
+### :date: 11/10/2022
 
+### Review on git keywords learned so far
+
+- git commit, git checkout, git checkout -b, git branch
+
+#### git 인증 방법
+
+- ID/PW 방식
+- key 방식(공개키/개인키)
+- 토큰 방식(personal access token)
