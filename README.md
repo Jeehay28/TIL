@@ -227,6 +227,7 @@ $ git push -u origin main        <----- uploads content from a local repository 
 
 ```
 
+
 ## :date: 06/10/2022
 
 ### How to delete a git branch both locally and remotely
