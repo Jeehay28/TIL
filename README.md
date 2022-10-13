@@ -226,3 +226,54 @@ $ git branch -M main             <----- changes 'master' to 'main'
 $ git push -u origin main        <----- uploads content from a local repository to a remote repository
 
 ```
+
+
+## :date: 06/10/2022
+
+### How to delete a git branch both locally and remotely
+
+```
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+```
+
+### How to cancel a merge
+
+```
+# Reset all the changes back to the last commit.
+# Note: This cannot be reverted!
+$ git reset --hard HEAD
+
+# OR
+$ git merge --abort
+```
+
+### How to delete a commit
+
+```
+git reset --hard HEAD~1
+git push origin HEAD --force
+```
+
+## :date: 2022-10-11 (this is for a test showing that 'git push' rejection occurs)
+
+- review on all the keywords learned so far: git commit, git branch, git checkout, git checkout -b, git merge, git pull
+- [link](https://violet-bora-lee.github.io/git-tutorial/#commit)
+
+### Github authentication
+
+- ID/PW
+- public key & private key
+- personal access token
+
+### git merge 방식
+
+1. 3-way
+2. fast-forward
+
+### git push 내부에서 일어나는 일
+
+- git push origin main을 하면, (현재 main 브랜치를 체크아웃하고 있다는 가정 하에) git push origin main 을 입력하면, 로컬저장소에 있는 main 브랜치에 있는 모든 커밋이 원격저장소(origin)에 있는 main 브랜치로 병합이 되는데, 이 때 방식은 fast-forward
