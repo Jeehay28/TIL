@@ -226,15 +226,3 @@ $ git branch -M main             <----- changes 'master' to 'main'
 $ git push -u origin main        <----- uploads content from a local repository to a remote repository
 
 ```
-
-### :date: 11/10/2022
-
-### Review on git keywords learned so far
-
-- git commit, git checkout, git checkout -b, git branch
-
-#### git 인증 방법
-
-- ID/PW 방식
-- key 방식(공개키/개인키)
-- 토큰 방식(personal access token)
