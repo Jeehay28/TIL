@@ -5,25 +5,10 @@
 - JavaScript code that is embedded with an HTML document
 
 ```
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-  <title>Use inline javascript</title>
-
-  <script type="text/javascript">
-
-    function definedInline() {
-      alert('This function was defined inline');
-    }
-
-  </script>
-</head>
-
-<body onLoad='definedInline()'>
+<body>
+<button
+onclick = "alert(' 알림 메시지가 표시됩니다 클릭 button>
 </body>
-
-</html>
 ```
 
 #### Internal JavaScript
@@ -38,7 +23,8 @@
 </body>
 ```
 
-```<script>
+```
+<script>
     function random(number) {
       return Math.floor(Math.random() * number);
     }
@@ -50,6 +36,7 @@
 
       bgChange();
     </script>
+
 ```
 
 #### External Javascript
@@ -70,9 +57,4 @@
 <body onLoad='definedExternally()'>
 </body>
 </html>
-```
-
-```
-let user = prompt("What is your name? ");
-alert(`Hello, ${user}!`);
 ```
