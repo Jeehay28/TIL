@@ -227,7 +227,6 @@ $ git push -u origin main        <----- uploads content from a local repository 
 
 ```
 
-
 ## :date: 06/10/2022
 
 ### How to delete a git branch both locally and remotely
@@ -277,3 +276,58 @@ git push origin HEAD --force
 ### git push 내부에서 일어나는 일
 
 - git push origin main을 하면, (현재 main 브랜치를 체크아웃하고 있다는 가정 하에) git push origin main 을 입력하면, 로컬저장소에 있는 main 브랜치에 있는 모든 커밋이 원격저장소(origin)에 있는 main 브랜치로 병합이 되는데, 이 때 방식은 fast-forward
+
+### 📅 18/10/2022
+
+### 🔗 [Learn Git Branching](https://learngitbranching.js.org/)
+
+#### Basics of Git -- committing, branching, and moving around in the source tree
+
+- Branches in Git are incredibly lightweight as well. They are simply pointers to a specific commit -- nothing more. This is why many Git enthusiasts chant the mantra:
+- **branch early, and branch often**
+- Because there is no storage / memory overhead with making many branches, it's easier to logically divide up your work than have big beefy branches.
+- Note: In Git version 2.23, a new command called git switch was introduced to eventually replace git checkout, which is somewhat overloaded (it does a bunch of different things depending on the arguments). The lessons here will still use checkout instead of switch because the switch command is still considered experimental and the syntax may change in the future. However you can still try out the new switch command in this application, and also [learn more here](https://git-scm.com/docs/git-switch).
+- The second way of combining work between branches is rebasing. Rebasing essentially takes a set of commits, "copies" them, and plops them down somewhere else.
+- While this sounds confusing, the advantage of rebasing is that it can be used to make a nice linear sequence of commits. The commit log / history of the repository will be a lot cleaner if only rebasing is allowed.
+- HEAD is the symbolic name for the currently checked out commit -- it's essentially what commit you're working on top of.
+- HEAD always points to the most recent commit which is reflected in the working tree. Most git commands which make changes to the working tree will start by changing HEAD.
+- Normally HEAD points to a branch name (like bugFix). When you commit, the status of bugFix is altered and this change is visible through HEAD.
+- Detaching HEAD just means attaching it to a commit instead of a branch.
+
+#### Relative Refs
+
+- Moving around in Git by specifying commit hashes can get a bit tedious. In the real world you won't have a nice commit tree visualization next to your terminal, so you'll have to use git log to see hashes.
+- Furthermore, hashes are usually a lot longer in the real Git world as well. For instance, the hash of the commit that introduced the previous level is `fed2da64c0efc5293610bdd892f82a58e8cbc5d8`. Doesn't exactly roll off the tongue...
+- The upside is that Git is smart about hashes. It only requires you to specify enough characters of the hash until it uniquely identifies the commit. So I can type `fed2` instead of the long string above.
+- Relative commits are powerful, but we will introduce two simple ones here:
+  - Moving upwards one commit at a time with Caret operattor `^`
+  - Moving upwards a number of times with tilde (`~`) operator. `~<num>`
+    - `main^` is equivalent to "the first parent of main".
+    - `main^^` is the grandparent (second-generation ancestor) of main
+    - `git checkout main^`
+    - You can directly reassign a branch to a commit with the -f option. So something like: `git branch -f main HEAD~3` moves (by force) the main branch to three parents behind HEAD.
+
+#### Reversing Changes in Git
+
+- There are two primary ways to undo changes in Git -- one is using `git reset` and the other is using `git revert`.
+- `git reset` reverses changes by moving a branch reference backwards in time to an older commit. In this sense you can think of it as **"rewriting history;" `git reset` will move a branch backwards as if the commit had never been made in the first place**.
+  - `git reset HEAD~1`
+- While resetting works great for local branches on your own machine, its method of "rewriting history" doesn't work for remote branches that others are using.
+- In order to reverse changes and share those reversed changes with others, we need to use `git revert`. Let's see it in action.
+  - `git revert HEAD`
+
+#### Git Cherry-pick
+
+- `git cherry-pick <Commit1> <Commit2> <...>`
+- It's a very straightforward way of saying that you would like to copy a series of commits below your current location (`HEAD`).
+- `git cherry-pick C2 C4`
+
+#### Interactive Rebase Intro
+
+- It's the best way to review a series of commits you're about to rebase.
+- All interactive rebase means Git is using the rebase command with the `-i` option.
+- If you include this option, git will open up a UI to show you which commits are about to be copied below the target of the rebase. It also shows their commit hashes and messages, which is great for getting a bearing on what's what.
+- **For "real" git, the UI window means opening up a file in a text editor like `vim`.**
+- In the real git interactive rebase you can do many more things like squashing (combining) commits, amending commit messages, and even editing the commits themselves.
+- `git rebase -i HEAD~4`
+- `git rebase --abort`
