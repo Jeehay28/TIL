@@ -384,6 +384,267 @@ length: 2
 [[Prototype]]: NodeList
 ```
 
+### 📅 19/10/2022
+
+### JavaScript Array forEach()
+
+- The `forEach()` method calls a function for each element in an array.
+- The `forEach()` method is not executed for empty elements.
+
+```
+let sum = 0;
+const numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction);
+
+function myFunction(item) {
+  sum += item;
+}
+```
+
+```
+const students = ["K", "L", "J"];
+for (let i=0; i<students.length; i++) {
+    document.write(`${students[i]},  `);
+}
+// using forEach loop
+students.forEach(function(student) {
+    document.write(`${student}     `)
+});
+
+// using arrow function
+students.forEach (student => document.write(`${student}`));
+```
+
+```
+// const fruits = ["A", "B", "G", "O"];
+// fruits.forEach( fruit => document.write(`${fruit}, `));
+```
+
 ### JavaScript HTML DOM EventListener
 
-- to be continued on Oct 19
+- The `addEventListener()` method attaches an event handler to the specified element.
+- The `addEventListener()` method attaches an event handler to an element without overwriting existing event handlers.
+
+#### `document.addEventListener(event, function, Capture)`
+
+- **_event_**
+  - event Required.
+  - The event name.
+  - **Do not use the "on" prefix.**
+  - **Use "click" instead of "onclick".**
+- **_function_**
+  - function Required.
+  - The function to run when the event occurs.
+  - When the event occurs, an event object is passed to the function as the first parameter. The type of the event object depends on the specified event. For example, the "click" event belongs to the MouseEvent object.
+- **_Capture_**
+  - Optional (default = false).
+  - true - The handler is executed in the capturing phase.
+  - false - The handler is executed in the bubbling phase.
+
+### 🌱 [Example] Change background color
+
+```
+const button = document.querySelector("button");
+
+// button.onclick = function() {
+//   document.body.style.backgroundColor = "#222";
+//   document.body.style.color = "#fff";
+// }
+
+button.addEventListener("click", function() {
+  document.body.style.backgroundColor = "#222";
+  document.body.style.color="#222";
+});
+```
+
+### 🌱 [Example] Count string length
+
+```
+const word = document.querySelector("#word");
+const bttn = document.querySelector("#bttn");
+const result = document.querySelector("#result");
+
+bttn.addEventListener("click", () => {
+    let length = word.value.length;
+    result.innerText = length;
+});
+```
+
+### `mouseover` & `mouseout`
+
+```
+const imgBox = document.querySelector("#container > img");
+
+imgBox.addEventListener ("mouseover", function() {
+    imgBox.src = "images/pic-6.jpg";
+});
+
+imgBox.addEventListener ("mouseout", () => {
+    imgBox.src = "images/pic-1.jpg";
+});
+```
+
+### 🔥 **[Excercise]** How To Create a Modal Box
+
+- A modal is a dialog box/popup window that is displayed on top of the current page:
+- 🔗 [modal.html](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/modal.html)
+- 🔗 [modla.css](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/css/modal.css)
+- 🔗 [modal.js](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/js/modal.js)
+
+```
+const open = document.querySelector("#open");
+const close = document.querySelector("#close");
+const modalBox = document.querySelector("#modal-box");
+
+open.addEventListener("click", () => {
+    modalBox.classList.add("active");
+});
+
+close.addEventListener("click", () => {
+    modalBox.classList.remove("active");
+});
+```
+
+### HTML DOM Element `addEventListener()`
+
+- The `addEventListener()` method attaches an event handler to an element.
+
+```
+const box = document.querySelector("#box");
+
+box.addEventListener("click", (event) => {
+    alert(`Event location: ${event.pageX}, ${event.pageY}`);
+})
+```
+
+### HTML `onkeydown` Event Attribute
+
+```
+const body = document.body;
+const result = document.querySelector("#result");
+
+body.addEventListener("keydown", (event) => {
+    result.innerText = `
+    Code : ${event.code},
+    Key : ${event.key}
+    `;
+});
+```
+
+### Carousel using JavaScript
+
+```
+const container = document.querySelector("#container");
+const arrows = document.querySelectorAll(".arrow");
+// arrows : array
+// const leftArrow = document.querySelector("#left");
+// const rightArrow = document.querySelector("#right");
+
+const pics = ['pic-1.jpg', 'pic-2.jpg', 'pic-3.jpg', 'pic-4.jpg', 'pic-5.jpg'];
+let i = 0; // index
+
+container.style.backgroundImage = `url(images/${pics[0]})`;
+// html root directory
+
+arrows.forEach( arrow =>{
+    arrow.addEventListener("click", (event) => {
+        // console.log(event.target);
+       if (event.target.id === "left") {
+        // before image
+        i--;
+        if (i < 0) {
+            i = pics.length - 1;
+        }
+       } // next image
+       else {
+        i++;
+        if (i >= pics.length) {
+            i = 0;
+        }
+       }
+       container.style.backgroundImage = `url(images/${pics[i]})`;
+    });
+});
+```
+
+```
+const container = document.querySelector("#container");
+const leftArrow = document.querySelector("#left");
+const rightArrow = document.querySelector("#right");
+
+const pics = ['pic-1.jpg', 'pic-2.jpg', 'pic-3.jpg', 'pic-4.jpg', 'pic-5.jpg'];
+let i = 0; // index
+
+container.style.backgroundImage = `url(images/${pics[0]})`;
+
+leftArrow.addEventListener ("click", () => {
+    i--;
+    if (i < 0 ) {
+        i = pics.length - 1;
+    }
+    container.style.backgroundImage = `url(images/${pics[i]})`;
+});
+
+rightArrow.addEventListener("click", () => {
+    i++;
+    if (i === pics.length) {
+        i = 0;
+    }
+    container.style.backgroundImage = `url(images/${pics[i]})`;
+});
+```
+
+### Reference
+
+🔗 [Web Almanac](https://almanac.httparchive.org/en/2022/)
+
+### 🌟 HTML `data-*` Attribute
+
+- The `data-*` attribute is used to store custom data private to the page or application.
+- The `data-*` attribute gives us the ability to embed custom data attributes on all HTML elements.
+- The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).
+
+### 🌟 JavaScript `this` Keyword
+
+- In JavaScript, the `this` keyword refers to an object.
+- Which object depends on how `this` is being invoked (used or called).
+- The `this` keyword refers to different objects depending on how it is used:
+- **In HTML event handlers, `this` refers to the HTML element that received the event:**
+- The handling of `this` is also different in arrow functions compared to regular functions.
+- In short, with arrow functions there are no binding of `this`.
+- In regular functions the `this` keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+- With arrow functions the `this` keyword always represents the object that defined the arrow function.
+
+### 🔥 **[Excercise]** Lightbox (Modal Image Gallery)
+
+- 🔗 [lightbox.html](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/lightbox.html)
+- 🔗 [lightbox.css](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/css/lightbox.css)
+- 🔗 [lightbox.js](https://github.com/Jeehay28/HTML-CSS-Source-Code/blob/main/js/lightbox.js)
+
+```
+  <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+```
+
+```
+const pics = document.querySelectorAll(".pic");
+//  6 pictures
+
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector("#lightboxImage");
+
+// console.log(pics);
+function showLightBox() {
+    let bigLocation = this.getAttribute("data-src");
+    // lightboxImage.setAttribute("src", bigLocation);
+    lightboxImage.src = bigLocation;
+    lightbox.style.display = "block";
+}
+
+for  (let i = 0; i < pics.length; i++) {
+    pics[i].addEventListener("click", showLightBox);
+}
+
+lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+```
