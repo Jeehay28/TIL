@@ -83,3 +83,5 @@ document.getElementById("header");
 - The location object is a property of the window object.
 - The navigator object is accessed with:
 - `window.navigator` or just `navigator`:
+
+dsfsdgsgsdgsdgsgs
