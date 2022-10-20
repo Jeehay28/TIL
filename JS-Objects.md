@@ -77,8 +77,6 @@ document.getElementById("header");
 
 ### 📅 21/10/2022 (📚 Ch.21)
 
-### things to study today
-
 ### The Window Navigator Object
 
 - The navigator object contains information about the browser.
