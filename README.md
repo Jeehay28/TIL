@@ -336,5 +336,5 @@ git push origin HEAD --force
 
 ### 🔗 [Learn Git Branching](https://learngitbranching.js.org/)
 
-![learn-git-branching-level-1](../resources/main.png)
-![learn-git-branching-level-2](../resources/remote.png)
+![learn-git-branching-level-1](https://github.com/Jeehay28/wiset-ai-oss-hw/blob/master/resources/main.PN)
+![learn-git-branching-level-2](https://github.com/Jeehay28/wiset-ai-oss-hw/blob/master/resources/remote.PNG)
