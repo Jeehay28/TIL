@@ -331,3 +331,10 @@ git push origin HEAD --force
 - In the real git interactive rebase you can do many more things like squashing (combining) commits, amending commit messages, and even editing the commits themselves.
 - `git rebase -i HEAD~4`
 - `git rebase --abort`
+
+### 📅 25/10/2022
+
+### 🔗 [Learn Git Branching](https://learngitbranching.js.org/)
+
+![learn-git-branching-level-1](../resources/main.png)
+![learn-git-branching-level-2](../resources/remote.png)
