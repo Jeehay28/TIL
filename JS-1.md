@@ -189,7 +189,7 @@ PI = 3.14;      // This will give an error
 PI = PI + 10;   // This will also give an error
 ```
 
-### 🔥 **[Excercise]** Age Calculator by Date of Birtth
+### 🔥 **[Excercise]** Age Calculator by Date of Birth
 
 ```
 <!DOCTYPE html>
