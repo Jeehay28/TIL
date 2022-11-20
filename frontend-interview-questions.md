@@ -28,6 +28,7 @@ order
     - flex
     - align-self
 
+![CSS flexbox](images/css-flexbox.png)
 ### CSS Animations
 - CSS allows animation of HTML elements without using JavaScript or Flash!
 - An animation lets an element gradually change from one style to another.
@@ -129,6 +130,7 @@ function myFunction() {
     - AJAX is a misleading name. AJAX applications might use XML to transport data, but it is equally common to transport data as plain text or JSON text.
     - AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
 
+![how AJAX works](images/how-ajax-works.png)
 
 
 ### XML
@@ -231,4 +233,19 @@ function myFunction() {
 - JavaScript in strict mode does not allow variables to be used if they are not declared.
 
 
+### Event Bubbling
+- Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.
+
+### Event capturing
+- Event capturing is one of two ways to do event propagation in the HTML DOM. In event capturing, an event propagates from the outermost element to the target element. It is the opposite of event bubbling, where events propagate outwards from the target to the outer elements.
+
+![event bubbling & capturing](images/capturing.jpg)
+
+
+### Single Threaded
+- In the context of programming, Parallelism is the utilization of multiple threads in an operating system. Routines are able to run at the same time regardless of execution order. JavaScript, however, is single threaded and only one line of code can be executed at any given time.
+![thread](images/thread.png)
+
+### JSON vs Object
+![JSON vs Object](images/json-vs-object.png)
 
