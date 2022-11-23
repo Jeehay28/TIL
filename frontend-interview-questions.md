@@ -249,3 +249,24 @@ function myFunction() {
 ### JSON vs Object
 ![JSON vs Object](images/json-vs-object.png)
 
+
+### Web API
+- API stands for Application Programming Interface.
+
+- A Web API is an application programming interface for the Web.
+
+- A Browser API can extend the functionality of a web browser.
+
+- A Server API can extend the functionality of a web server.
+
+- All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data.
+
+- Third party APIs are not built into your browser.
+
+- To use these APIs, you will have to download the code from the Web.
+
+- Examples:
+
+  - YouTube API - Allows you to display videos on a web site.
+  - Twitter API - Allows you to display Tweets on a web site.
+  - Facebook API - Allows you to display Facebook info on a web site.
